@@ -15,16 +15,12 @@ Route::controller('users','UsersController');
 
 Route::post('token',  'Tappleby\AuthToken\AuthTokenController@store');
 
-Route::get('debug', function(){
-    echo URL::route('story_start');
-});
 
-
-Route::group(array('domain'=>'api.dev.tracking.co', 'before' => 'auth.token'), function(){
+Route::group(array('prefix'=>'api', 'before' => 'auth.token'), function(){
     Route::controller('sync','SyncController');
 
     Route::group(array('prefix'=>'stories'), function(){
-        Route::get('{id}/start', array('uses'=> 'StoryController@start', 'as'=>'story_start'));
+        Route::get('{id}/start', array('uses'=> 'StoryController@start'));
         Route::get('{id}/pause', 'StoryController@pause');
         Route::get('{id}/stop', 'StoryController@stop');
         Route::resource('/', 'StoryController');
@@ -33,6 +29,11 @@ Route::group(array('domain'=>'api.dev.tracking.co', 'before' => 'auth.token'), f
 
     Route::get('me', 'Tappleby\AuthToken\AuthTokenController@index');
 });
+
+
+
+
+Route::resource('debug', 'TestController');
 
 Route::controller('/', 'DashboardController');
 

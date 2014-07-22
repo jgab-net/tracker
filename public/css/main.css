@@ -1,0 +1,84 @@
+body{
+    padding-top: 70px;
+    background-color: #ccc;
+}
+
+.login-box {
+    max-width: 330px;
+    width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.login-box .login-box-heading {
+    margin-bottom: 10px;
+}
+
+.stories .panel-heading{
+    padding: 0;
+}
+
+.story{
+    margin: 0;
+}
+
+.story > .col-md-8, .story > .col-md-6, .story > .col-md-2{
+    min-height:30px;
+}
+
+.story .options-container{
+    padding: 0;
+    text-align: right;
+}
+
+.story .options{
+    margin-right: -1px;
+}
+
+.login-box .sign-in{
+    position: relative;
+}
+
+.login-box .sign-in:hover .sign-in-icon{
+    background: #e0e0e0 0 -15px;
+}
+
+.login-box .sign-in-icon{
+    position: absolute;
+    width: 45px;
+    padding: 5px;
+    top: -1px;
+    right: -1px;
+    border:1px solid #ccc;
+    background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%)
+}
+
+.login-box .form-group{
+    margin-bottom: 0;
+}
+
+.login-box .form-control {
+    position: relative;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.login-box .form-control:focus {
+    z-index: 2;
+}
+.login-box input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.login-box input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.btn, .form-control, .btn-group-sm .btn, .panel-group .panel{
+    border-radius: 0;
+}
